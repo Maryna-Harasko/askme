@@ -1,0 +1,9 @@
+<h2>Питання</h2>
+<p><%= @question.body %></p>
+<p>user_id: <b><%= @question.user_id %></b></p>
+
+<p><%= link_to "Змінити питання", edit_question_path(@question) %></p>
+
+<div><%= button_to "Видалити питання", question_path(@question), method: :delete %></div>
+
+<p><%= link_to "Усі питання", questions_path %></p>

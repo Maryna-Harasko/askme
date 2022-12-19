@@ -1,0 +1,7 @@
+<h2>Питання</h2>
+
+<% @question.each do |question| %>
+  <p><%= link_to "Питання #{question.id}", question_path(id: question.id) %></p>
+<% end %>
+
+<p><%= link_to "Створити нове питання", new_question_path %></p>
