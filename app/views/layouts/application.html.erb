@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="ukr">
   <head>
     <title>Askme</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
@@ -11,7 +11,13 @@
   </head>
 
   <body>
+
     <div class = 'wrapper'>
+
+      <% if flash[:notice].present? %>
+        <p class="mb mt message message-notice"><%= flash[:notice] %></p>
+      <% end %>
+
       <%= yield %>
     </div>
   </body>
