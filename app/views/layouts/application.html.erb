@@ -16,6 +16,8 @@
 
       <% if flash[:notice].present? %>
         <p class="mb mt message message-notice"><%= flash[:notice] %></p>
+        <% elsif flash[:alert].present? %>
+        <p class="mb mt message message-alert"><%= flash[:alert] %></p>
       <% end %>
 
       <%= yield %>
