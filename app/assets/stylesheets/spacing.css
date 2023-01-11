@@ -2,7 +2,7 @@
     margin-top: 0.6rem;
 }
 
-.mt, mt-sm{
+.mt, .mt-sm{
     margin-top: 1rem;
 }
 
@@ -14,10 +14,22 @@
     margin-bottom: 0.6rem;
 }
 
-.mb, mb-sm{
+.mb, .mb-sm{
     margin-bottom: 1rem;
 }
 
 .mb-lg{
     margin-bottom: 1.75rem;
+}
+
+.mr-sm{
+    margin-right: 0.6em;
+}
+
+.mr, .mr-md{
+    margin-right: 1em;
+}
+
+.mr-lg{
+    margin-right: 1.75em;
 }

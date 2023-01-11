@@ -13,6 +13,20 @@
   <body>
 
     <div class = 'wrapper'>
+      <div class="navbar">
+        <p class="title-sm text-bold">
+          <%= link_to 'Ask me!', root_path %>
+        </p>
+        <div>
+          <% if current_user.present? %>
+            <%= content_tag 'span', "@#{current_user.nickname}", class: 'mr-sm' %>
+            <%= button_to 'Вийти', session_path, method: :delete %>
+          <% else %>
+            <%= link_to 'Реєстрація', new_user_path, class: 'button button-yellow mr-sm' %>
+            <%= link_to 'Вхід', new_session_path, class: 'button button-yellow' %>
+          <% end %>
+        </div>
+      </div>
 
       <% if flash[:notice].present? %>
         <p class="mb mt message message-notice"><%= flash[:notice] %></p>
